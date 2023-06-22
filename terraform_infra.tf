@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "ap-south-1"
+}
+
 resource "aws_vpc" "awsvpc" {
   cidr_block = "10.0.0.0/16"
 
@@ -51,7 +55,7 @@ resource "aws_instance" "ubuntu20-splunk" {
   ami = "ami-08e5424edfe926b43"
   instance_type = "t2.micro"
   key_name = "vm"
-  user_data = file("jenkins.sh")
+  user_data = file("Docker.sh")
  subnet_id = aws_subnet.public.id
  vpc_security_group_ids = [aws_security_group.public_sec.id]
  associate_public_ip_address = true
