@@ -22,8 +22,7 @@ pipeline {
                 sh 'echo "Infrastructure built successfully"'
             }
         }
-    }
-       stage('Build Infrastructure') {
+        stage('Destroy Infrastructure') {
             steps {
                 withAWS(credentials: '112') {
                     sh 'terraform init'
@@ -31,8 +30,5 @@ pipeline {
                 }
             }
         }
-
+    }
 }
-
-
-
