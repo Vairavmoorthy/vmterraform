@@ -46,7 +46,7 @@ resource "aws_instance" "ubuntu20-a" {
   ami = "ami-08e5424edfe926b43"
   instance_type = "t2.micro"
   key_name = "vm"
-  user_data = file("apache.sh")
+  user_data = file("ansible.sh")
  subnet_id = aws_subnet.public.id
  vpc_security_group_ids = [aws_security_group.public_sec.id]
  associate_public_ip_address = true
