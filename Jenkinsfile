@@ -22,11 +22,11 @@ pipeline {
                 sh 'echo "Infrastructure built successfully"'
             }
         }
-        stage('Destroy Infrastructure') {
+        stage('Deployment success') {
             steps {
-                withAWS(credentials: '112') {
-                    sh 'terraform init'
-                    sh 'terraform destroy -auto-approve'
+         
+                    sh 'echo "Infra_deployment successfully completed"'
+                    
                 }
             }
         }
