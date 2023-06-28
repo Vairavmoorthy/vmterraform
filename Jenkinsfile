@@ -22,6 +22,7 @@ pipeline {
                 sh 'echo "Infrastructure built successfully"'
             }
         }
+<<<<<<< HEAD
         stage('Deployment success') {
             steps {
          
@@ -30,5 +31,7 @@ pipeline {
                 }
             }
         }
+=======
+>>>>>>> 523b153223133db232092d8fcb7699db04b78ea8
     }
 }
