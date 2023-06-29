@@ -22,12 +22,9 @@ pipeline {
                 sh 'echo "Infrastructure built successfully"'
             }
         }
-        stage('Deployment success') {
+        stage('Deployment Success') {
             steps {
-         
-                    sh 'echo "Infra_deployment successfully completed"'
-                    
-                }
+                sh 'echo "Infra_deployment successfully completed"'
             }
         }
     }
