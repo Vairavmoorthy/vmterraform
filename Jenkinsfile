@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    environment {
-        TF_VAR_credentials = credentials('112')
-    }
+    #environment {
+        #TF_VAR_credentials = credentials('112')
+    #}
     stages {
         stage('Checkout') {
             steps {
