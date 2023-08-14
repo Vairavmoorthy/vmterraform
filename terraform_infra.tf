@@ -62,4 +62,4 @@ resource "aws_instance" "ubuntu20-docker" {
 tags = {
 Name = "Nodejs-pc"
 }
-
+}
